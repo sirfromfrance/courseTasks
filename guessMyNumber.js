@@ -27,9 +27,7 @@ document.querySelector(".check").addEventListener("click", function () {
   } else if (guess !== secretNumber) {
     //too high or too low
     if (score > 1) {
-      guess > secretNumber
-        ? displayMessage("too high🤷‍♀️")
-        : displayMessage("too low😒");
+      displayMessage(guess > secretNumber ? "too high🤷‍♀️" : "too low😒");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
