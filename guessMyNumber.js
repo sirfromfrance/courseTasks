@@ -38,8 +38,8 @@ document.querySelector(".check").addEventListener("click", function () {
 
 document.querySelector(".again").addEventListener("click", function () {
   score = 20;
-  document.querySelector(".score").textContent = score;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector(".score").textContent = score;
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".guess").value = "";
   displaySecretNum("?");
