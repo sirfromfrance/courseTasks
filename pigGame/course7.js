@@ -61,21 +61,26 @@ buttonHold.addEventListener("click", function () {
 
 //resetting the game
 buttonNew.addEventListener("click", function () {
-  playing = true;
-  score0El.textContent = 0;
-  score1El.textContent = 0;
+
+ playing = true;
+
   scores[0] = 0;
   scores[1] = 0;
   document.getElementById(`score--${activePlayer}`).textContent = scores[0];
   document.getElementById(`score--${activePlayer}`).textContent = scores[1];
   activePlayer = 0;
+  currentScore = 0;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  document.getElementById(`current--${activePlayer}`).textContent =
+    currentScore;
+
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove("player--winner");
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.add("player--active");
-  currentScore = 0;
   document.getElementById(`current--${activePlayer}`).textContent =
     currentScore;
 });
